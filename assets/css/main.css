@@ -1,0 +1,472 @@
+body {
+  min-height: 100%;
+  position: relative;
+  color: #ffffff;
+  font-family: sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/*Header area start*/
+.banner-section {
+  width: 100%;
+  background: linear-gradient(to right, rgba(137, 196, 244, 0.1), rgba(255,127,80, 0.1)), url(../img/banner.jpg);
+  background-position: center center;
+  height: 120px;
+  background-size: contain;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+  justify-content: center;
+}
+
+.site-logo img {
+  max-width: 100px;
+  display: inline-block;
+  top: 10px;
+  position: absolute;
+  left: 80px;
+}
+.site-logo h2 {
+  font-family: CURSIVE;
+  font-size: 40px;
+  color: #3B6BB5;
+}
+
+/*Header area end*/
+
+/* navbar section start */
+
+.navbar-section {
+  width: 180px;
+  background: rgba(52, 73, 94, 1);
+  height: calc(100% - 120px);
+  position: absolute;
+  left: 0;
+}
+
+.navbar-items-list {
+  padding: 20px 25px 20px 25px;
+}
+
+.navbar-items-list a:hover {
+  text-decoration: underline;
+}
+
+.navbar-items-list a {
+  margin-bottom: 25px;
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.navbar-items-list a i {
+  display: inline-block;
+  margin-right: 3px;
+}
+
+/* navbar section end */
+
+/* side bar start */
+
+.sidebar-section {
+  width: 180px;
+  background: rgba(52, 73, 94, 1);
+  height: calc(100% - 120px);
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 120px;
+}
+
+.sidebar-section p {
+  font-size: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  line-break: anywhere;
+}
+
+.sidebar-puppy {
+  margin-bottom: 20px;
+}
+
+.sidebar-puppy img {
+  width: 120px;
+  height: 175px;
+}
+
+.sidebar-section a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sidebar-section a:hover {
+  text-decoration: underline;
+}
+
+.sidebar-contact {
+  margin-top: 50px;
+}
+
+.sidebar-section a:nth-of-type(2) {
+  display: block;
+}
+
+/* side bar end */
+
+/*Landing page start*/
+
+.landing-overlay {
+  background: #DCDCDC;
+  opacity: 0.8;
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  z-index: 1;
+}
+
+.landing-content-container {
+  position: absolute;
+}
+
+#landing-video {
+  width: 100%;
+  border: 5px solid #000000;
+}
+
+#landing-audio {
+  display: none;
+}
+
+.landing-content {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.landing-content h1 {
+  position: absolute;
+  font-size: 48px;
+  right: 0;
+  top: 30%;
+  text-align: center;
+  text-shadow: 2px 2px #000000;
+  background: rgba(44, 130, 201, 0.4);
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+}
+
+.enter-site-button div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60%;
+  margin: 0 auto;
+  width: 200px;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 4px 4px #DCDCDC;
+  border: 2px solid #DCDCDC;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.enter-site-button {
+  text-decoration: none;
+  color: #000000;
+}
+
+.enter-site-button:hover div {
+  border: 2px solid #A9A9A9;
+}
+
+/*Landing Page end*/
+
+/*Index page start*/
+
+#landing-content-container {
+  display: none;
+}
+
+.index-main-section {
+  display: flex;
+  color: #000000;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.index-main-section-block {
+  border: 2px solid #f5d76e;
+  margin: 50px 10px;
+  width: 240px;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.index-main-section-block i {
+  color: #f5d76e;
+}
+
+.index-courses-button,
+.dog-age-button {
+  width: 100%;
+  margin: 50px;
+  z-index: 0;
+}
+
+.index-courses-button div,
+.dog-age-button div {
+  position: relative;
+  top: 0;
+  background: rgba(44, 130, 201, 1);
+  color: #ffffff;
+  text-shadow: 1px 1px #000000;
+  margin: 0 auto;
+}
+
+.index-courses-button:hover div {
+  border: 2px solid #000000;
+}
+
+.index-main-section-title {
+  width: 100%;
+  text-align: center;
+  color: rgba(52, 73, 94);
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+/*Index page end*/
+
+/*Main section start*/
+
+.main-section {
+  width: 100%;
+}
+
+.main-section .contain-area {
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100%;
+}
+.main-section .contain-area::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main-section .contain-area::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+/*Main section end*/
+
+/*footer section start*/
+.footer-box {
+  min-height: 200px;
+  background: #f5d76e;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+  height: 240px;
+}
+
+.footer-box p:first-of-type {
+  padding-top: 30px;
+}
+
+.address-footer p a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.address-footer p a:hover {
+  text-decoration: underline;
+}
+
+/*footer section end*/
+
+/*About page start*/
+.about-main-section-title {
+  margin: 0 80px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.valued-partners-section {
+  color: rgba(52, 73, 94);
+  margin: 20px 0;
+}
+
+.valued-partners-row {
+  display: flex;
+}
+
+.valued-partners-section h2 {
+  text-align: center;
+  margin: 30px;
+}
+
+.valued-partners-row img {
+  margin: 20px;
+}
+/*About page end*/
+
+/*FAQ page start*/
+.faq-img-gallery {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.faq-img-gallery img {
+  width: 200px;
+  max-height: 150px;
+  max-width: 200px;
+  height: auto;
+  margin: 20px;
+}
+
+.faq-section h2 {
+  color: #f5d76e;
+}
+
+.faq-section p {
+  margin: 0 80px;
+}
+/*FAQ page end*/
+
+/*Courses page start*/
+  .courses-section h2 {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .course {
+    display: flex;
+    margin: 0 100px;
+  }
+
+  .course h3 {
+    color: #ffffff;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px;
+    background: #f5d76e;
+  }
+
+  .course h3:hover {
+    border: 1px solid #ffffff;
+  }
+
+  .course img {
+    margin-right: 50px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: 180px;
+  }
+
+  .course a {
+    text-decoration: none;
+  }
+
+  .course-section {
+    margin: 0 80px;
+    text-align: center;
+  }
+
+  .course-section h3 {
+    color: #f5d76e;
+  }
+
+  .course-section h2 {
+    width: 100%;
+  }
+
+  .course-section div {
+    width: 100%;
+  }
+
+  .course-section img {
+    width: 500px;
+    height: auto;
+  }
+/*Courses page end*/
+
+/*Dog calc section start*/
+  .dog-calc-main-section h2,
+  .dog-calc-main-section p {
+    color: #f5d76e;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  .dog-calc-main-section p {
+    margin: 0 0 10px 0;
+  }
+
+  .dog-calc-size,
+  .dog-calc-age {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dog-calc-size img {
+    margin: 0 40px;
+    cursor: pointer;
+    border: 5px solid transparent;
+  }
+
+  .dog-calc-age input {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid rgba(52, 73, 94, 1);
+    border-radius: 10px;
+  }
+
+  .dog-calc-age input:focus {
+    outline: none;
+    border: 2px solid #f5d76e;
+  }
+
+  .dog-age-button div {
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  .dog-age-buttons-container {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  #dog-human-age {
+    margin: 40px 0;
+  }
+
+  .dog-calc-main-section #dog-calc-error {
+    color: red;
+    margin-top: 40px;
+    display: none;
+  }
+
+  .dog-age-button {
+    margin: 10px;
+  }
+/*Dog calc section end*/

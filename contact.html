@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact Us </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/css/main.css"/>
+    <style>
+      .form-box {
+        color: rgba(52, 73, 94);
+      }
+      .form-box h2 {
+        font-size: 40px;
+        text-decoration: underline;
+        text-align: center;
+      }
+      .form-area-self {
+        padding: 20px 80px;
+      }
+      .form-row {
+        margin-top: 20px;
+      }
+      .col label {
+        font-weight: 600;
+      }
+      .form-control {
+        border-radius: 0;
+      }
+      form button {
+        margin-top: 20px;
+        display: inline-block;
+        width: 30%;
+        padding: 30px;
+        text-transform: uppercase;
+      }
+      .btn-primary {
+        font-size: 22px;
+        font-weight: 700;
+        border: 0;
+        letter-spacing: 3px;
+        border: 2px solid transparent;
+      }
+      .btn-primary:hover {
+        border: 2px solid #f5d76e;
+      }
+      .radio-check {
+        display: inline !important;
+        font-weight: 300 !important;
+        margin-left: 5px;
+      }
+      .radio-button {
+        margin-left: 18px;
+        width: 20px !important;
+        display: inline !important;
+      }
+      .yellow {
+        background: #f5d76e;
+      }
+      .form-row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -5px;
+        margin-left: -5px;
+      }
+      .form-row > .col,
+      .form-row > [class*="col-"] {
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+      .col {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        margin-right: 20px;
+      }
+      .col label {
+        font-weight: 600;
+      }
+      label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+      }
+      .form-control {
+        display: block;
+        width: 100%;
+        height: calc(2.25rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      .form-control:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+      .valid-feedback {
+        display: none;
+        width: 100%;
+        margin-top: 0.25rem;
+        font-size: 80%;
+        color: #28a745;
+      }
+      .invalid-feedback {
+        display: none;
+        width: 100%;
+        margin-top: 0.25rem;
+        font-size: 80%;
+        color: #dc3545;
+      }
+      input {
+        overflow: visible;
+        margin: 0;
+        font-family: inherit;
+      }
+      .form-inline {
+        display: -ms-flexbox;
+        display: flex;
+        flex-flow: row wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .row {
+        display: -ms-flexbox;
+         display: flex;
+        -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
+         margin-right: -15px;
+         margin-left: -15px;
+      }
+      small {
+        font-size: 80%;
+        font-weight: 400;
+      }
+      .form-inline .col {
+        display: flex;
+        align-items: flex-end;
+      }
+      select.form-control[multiple],
+      select.form-control[size] {
+        height: auto;
+      }
+      textarea.form-control {
+        height: auto;
+      }
+      .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      .btn-primary {
+        font-size: 22px;
+        font-weight: 700;
+        border: 0px;
+        letter-spacing: 3px;
+      }
+      .btn-primary:not(:disabled):not(.disabled):active {
+        color: #fff;
+        background-color: #0062cc;
+        border-color: #005cbf;
+      }
+      .btn-primary:not(:disabled):not(.disabled):active:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- top banner -->
+    <header>
+      <section class="banner-section">
+        <div class="site-logo">
+          <img src="./assets/img/logo.png" alt="logo"/>
+          <h2>BARKER'S ACADEMY</h2>
+        </div>
+      </section>
+    </header>
+
+    <!-- navbar -->
+    <nav>
+      <div class="navbar-section">
+        <div class="navbar-items-list">
+          <a href="index.html"><i class="fas fa-paw"></i> Home Page</a>
+          <a href="courses.html"><i class="fas fa-bone"></i> Courses </a>
+          <ul>
+            <li><a href="courses1.html">Teaching your dog fun tricks!</a></li>
+          </ul>
+          <ul>
+            <li><a href="courses2.html">How to stop leash pulling!</a></li>
+          </ul>
+          <ul>
+            <li><a href="courses3.html">Dog Training Basics!</a></li>
+          </ul>
+          <ul>
+            <li><a href="courses4.html">Training your Puppy!</a></li>
+          </ul>
+          <a href="faq.html"><i class="fas fa-paw"></i> FAQ</a>
+          <a href="./contact.html"><i class="fas fa-bone"></i> Contact</a>
+          <a href="about.html"><i class="fas fa-paw"></i> About Us</a>
+          <a href="./dog-age-calculator.html">
+            <i class="fas fa-bone"></i> Calculate Your Dog's Age
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar-end -->
+
+    <!-- main section -->
+    <section class="main-section">
+      <div class="contain-area">
+        <!-- table area -->
+        <div class="form-box">
+          <h2>Contact Form</h2>
+          <div class="form-area-self">
+            <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+              <div class="form-row">
+                <div class="col">
+                  <label for="fname">First Name *</label>
+                  <input
+                    type="text"
+                    class="form-control yellow"
+                    placeholder="First Name "
+                    id="fname"
+                    name="firstName"
+                    required=""/>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Choose First Name.
+                  </div>
+                </div>
+                <div class="col">
+                  <label for="lname">Last Name *</label>
+                  <input
+                    type="text"
+                    class="form-control yellow"
+                    placeholder="Last Name "
+                    id="lname"
+                    name="LastName"
+                    required=""/>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Choose Last Name
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col">
+                  <label for="city">City *</label>
+                  <input
+                    type="text"
+                    class="form-control yellow"
+                    placeholder="city"
+                    id="city"
+                    name="City"
+                    required/>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please add City Name
+                  </div>
+                </div>
+                <div class="col">
+                  <label for="state">State *</label>
+                  <input
+                    type="text"
+                    class="form-control yellow"
+                    placeholder="state"
+                    id="state"
+                    name="State"
+                    required/>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please add State Name
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col">
+                  <label for="zip">Zip Code *</label>
+                  <input
+                    type="text"
+                    class="form-control yellow"
+                    placeholder="Zip Code"
+                    id="zip"
+                    name="ZipCode"
+                    required/>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please add Zip code
+                  </div>
+                </div>
+                <div class="col">
+                  <label for="Country">Country *</label>
+                  <input
+                    type="text"
+                    class="form-control yellow"
+                    placeholder="Country"
+                    id="Country"
+                    name="Country"
+                    required/>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Choose Country
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="col">
+                  <label>What are Your Age group*</label>
+                  <div class="row form-inline mb-3">
+                    <div class="col">
+                      <input
+                        type="radio"
+                        class="form-control radio-button"
+                        placeholder="age"
+                        id="underone"
+                        name="Under13"/>
+                      <label for="underone" class="radio-check">Under 13</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="radio"
+                        class="form-control radio-button"
+                        id="undertwo"
+                        name="13 to 19"/>
+                      <label for="undertwo" class="radio-check">13 to 19</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="radio"
+                        class="form-control radio-button"
+                        id="underthree"
+                        name="20 to 34"/>
+                      <label class="radio-check">20 to 34</label>
+                    </div>
+                  </div>
+                 
+                  <div class="row form-inline">
+                    <div class="col">
+                      <input
+                        type="radio"
+                        class="form-control radio-button"
+                        placeholder="age"
+                        id="underfour"
+                        name="35 to 49"/>
+                      <label for="underone" class="radio-check">35 to 49</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="radio"
+                        class="form-control radio-button"
+                        id="underfive"
+                        name="50 to 64"/>
+                      <label for="undertwo" class="radio-check">50 to 64</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="radio"
+                        class="form-control radio-button"
+                        id="undersix"
+                        name="Over 65"/>
+                      <label class="radio-check">over 65</label>
+                    </div>
+                  </div>
+             
+                </div>
+              </div>
+
+              <!-- check box starts here  -->
+              <div class="form-row">
+                <div class="col">
+                  <label>What breed dog do You own
+                    <small>Multiple items maybe selected</small>*</label>
+                  <div class="row form-inline mb-3">
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-control radio-button"
+                        placeholder="age"
+                        name="Labrador"/>
+                      <label class="radio-check">Labrador</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-control radio-button"
+                        id="checktwo"
+                        name="German Shepherd"/>
+                      <label class="radio-check">German Shepherd</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-control radio-button"
+                        id="checkthree"
+                        name="Golden Retriever"/>
+                      <label class="radio-check">Golden Retriever</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-control radio-button"
+                        placeholder="age"
+                        id="checkonefour"
+                        name="Bulldog"/>
+                      <label class="radio-check">Bulldog</label>
+                    </div>
+                  </div>
+                 
+                  <div class="row form-inline mb-3">
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-control radio-button"
+                        placeholder="age"
+                        id="checkone"
+                        name="Beagle"/>
+                      <label class="radio-check">Beagle</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-control radio-button"
+                        id="checksix"
+                        name="Poodle"/>
+                      <label class="radio-check">Poodle</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-control radio-button"
+                        id="checkseven"
+                        name="French Bulldog"/>
+                      <label class="radio-check">French Bulldog</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-control radio-button"
+                        placeholder="age"
+                        id="cehckeight"
+                        name="Rottweiler"/>
+                      <label for="cehckeight" class="radio-check">Rottweiler</label>
+                    </div>
+                  </div>
+            
+                  
+                  <div class="row form-inline mb-3">
+                    <div class="col">
+                      <input
+                              type="checkbox"
+                              class="form-control radio-button"
+                              placeholder="age"
+                              id="cehcknine"
+                              name="Yorkshire Terrier"/>
+                      <label for="cehcknine" class="radio-check">Yorkshire Terrier</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-control radio-button"
+                        placeholder="age"
+                        id="cehckten"
+                        name="Boxer"/>
+                      <label for="cehckten" class="radio-check">Boxer</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-control radio-button"
+                        id="cehckeleven"
+                        name="German Shorthaired Pointer"/>
+                      <label for="cehckeleven" class="radio-check">German Shorthaired Pointer</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-control radio-button"
+                        placeholder="age"
+                        id="cehckthirteen"
+                        name="Other"/>
+                      <label for="cehckthirteen" class="radio-check">Other</label>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <!-- check box ends here -->
+
+              <div class="form-row">
+                <div class="col">
+                  <label for="class"
+                    >How did you find about this website
+                    <small>(Hold down Ctrl or Shift Key to make Multiple selections)</small>*</label>
+                  <select
+                    id="class"
+                    class="form-control"
+                    name="WhereFindUs"
+                    multiple
+                    required>
+                    <option value="Google">Google </option>
+                    <option value="Yahoo">Yahoo</option>
+                    <option value="AltaVista">AltaVista</option>
+                    <option value="Excite">Excite</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="Friend">Friend</option>
+                  </select>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please select any option
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col">
+                  <label>Comments</label>
+                  <textarea
+                    name="Comments"
+                    id=""
+                    cols="30"
+                    rows="10"
+                    class="form-control">
+                  </textarea>
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit">
+                Submit Form
+              </button>
+              <button class="btn btn-primary btn-reset" type="reset">
+                Reset Form
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- table area ends here -->
+
+        <!-- footer box -->
+        <footer class="footer-box">
+          <div class="address-footer">
+            <p><a href="tel:203-123-4567"><b>Phone Number:</b> 203-123-4567</a></p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Pastry Chef Road, 3344 Black
+              Rock Turnpike, Mainstreet, CT 06822
+            </p>
+            <p class="footer-right-text"><b>Hours of Operation:</b></p>
+            <p class="footer-right-text">Monday to Friday 9am to 10pm</p>
+            <p class="footer-right-text">Saturday 10 am to 10 pm</p>
+            <p class="footer-right-text">Sunday Closed</p>
+          </div>
+        </footer>
+        <!-- footer box ends here -->
+      </div>
+    </section>
+    <!-- main section -->
+
+    <!-- sidebar -->
+    <section class="sidebar-section">
+      <h3>Adopt A Puppy Today!</h3>
+      <p>We have partnered with a local shelter to offer you these puppies for adoption! They would love to be a part of your home!!</p>
+      <div class="sidebar-puppy">
+        <a target="_blank" href="http://superpawsrescueinc.org/makila/"><img src="./assets/img/makilia.jpg"></a>
+        <a target="_blank" href="http://superpawsrescueinc.org/makila/">Makilia</a>
+      </div>
+      <div class="sidebar-puppy">
+        <a target="_blank" href="http://superpawsrescueinc.org/champ/"><img src="./assets/img/champ.jpg"></a>
+        <a target="_blank" href="http://superpawsrescueinc.org/champ/">Champ</a>
+      </div>
+      <div class="sidebar-puppy">
+        <a target="_blank" href="http://superpawsrescueinc.org/sonic/"><img src="./assets/img/sonic.jpg"></a>
+        <a target="_blank" href="http://superpawsrescueinc.org/sonic/">Sonic</a>
+      </div>
+      <p class="sidebar-contact">For more information, visit <a href="http://superpawsrescueinc.org">http://superpawsrescueinc.org</a> or email us at <a href="mailto:barkersacademy@gmail.com">barkersacademy@gmail.com!</a></p>
+    </section>
+    <!-- sidebar ends here -->
+  </body>
+</html>
